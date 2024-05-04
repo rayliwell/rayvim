@@ -29,6 +29,14 @@
           default = nixvim.legacyPackages.${system}.makeNixvimWithModule {
             inherit pkgs;
             module = (import ./.);
+
+            extraSpecialArgs = {
+              luaFunction = code: ''
+                function()
+                  ${code}
+                end
+              '';
+            };
           };
         };
       }

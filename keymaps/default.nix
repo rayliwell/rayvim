@@ -1,6 +1,9 @@
 { ... }:
 {
-  imports = [ ./buffer.nix ];
+  imports = [
+    ./buffer.nix
+    ./window.nix
+  ];
 
   keymaps = [
     {

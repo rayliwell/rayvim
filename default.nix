@@ -23,6 +23,8 @@
     clipboard = "unnamedplus";
     # Ensure new line keeps the same indentation level.
     breakindent = true;
+    # Ensure all folds are open by default.
+    foldenable = false;
     # TODO: Save undo history.
     undofile = true;
     # Search is case-insensitive unless it contains capital letters.

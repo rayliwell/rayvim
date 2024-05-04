@@ -1,9 +1,12 @@
 { ... }:
 {
-  imports = [ ./modules ];
+  imports = [
+    ./keymaps
+    ./modules
+  ];
 
   globals = {
-    leader = " ";
+    mapleader = " ";
   };
 
   opts = {

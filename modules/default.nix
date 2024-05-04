@@ -1,4 +1,7 @@
 { ... }:
 {
-  imports = [ ./todo.nix ];
+  imports = [
+    ./todo.nix
+    ./which-key.nix
+  ];
 }

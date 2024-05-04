@@ -1,5 +1,7 @@
 { luaFunction, ... }:
 {
+  keymapCategories."w" = "Window";
+
   keymaps = [
     {
       key = "<leader>wq";

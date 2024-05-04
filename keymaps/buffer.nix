@@ -1,4 +1,6 @@
 {
+  keymapCategories."b" = "Buffer";
+
   keymaps = [
     {
       key = "<leader>bs";

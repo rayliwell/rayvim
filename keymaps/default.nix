@@ -2,6 +2,7 @@
 {
   imports = [
     ./buffer.nix
+    ./help.nix
     ./window.nix
   ];
 
@@ -13,6 +14,16 @@
       mode = "n";
       options = {
         desc = "File browser";
+      };
+    }
+
+    {
+      key = "<leader>/";
+      action = "require('telescope.builtin').live_grep";
+      lua = true;
+      mode = "n";
+      options = {
+        desc = "Search";
       };
     }
 

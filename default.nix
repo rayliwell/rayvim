@@ -50,7 +50,10 @@
     scrolloff = 999;
   };
 
-  colorschemes = {
-    catppuccin.enable = true;
-  };
+  colorschemes.catppuccin.enable = true;
+
+  viAlias = true;
+  vimAlias = true;
+
+  luaLoader.enable = true;
 }

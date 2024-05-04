@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ./lsp.nix
     ./git.nix
     ./todo.nix
     ./completion.nix

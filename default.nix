@@ -1,5 +1,6 @@
+{ ... }:
 {
-  imports = [ ];
+  imports = [ ./modules ];
 
   globals = {
     leader = " ";

@@ -3,6 +3,7 @@
   imports = [
     ./keymaps
     ./modules
+    ./plugins
   ];
 
   extraPlugins = with pkgs.vimPlugins; [

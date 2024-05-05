@@ -1,0 +1,1 @@
+{ imports = [ ./neovim-plugin.nix ]; }

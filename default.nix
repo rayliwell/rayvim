@@ -26,6 +26,8 @@
     showmode = false;
     # TODO: See ":help 'clipboard'".
     clipboard = "unnamedplus";
+    # Never show tabline.
+    showtabline = 0;
     # Ensure new line keeps the same indentation level.
     breakindent = true;
     # Ensure all folds are open by default.

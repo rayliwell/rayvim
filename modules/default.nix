@@ -3,6 +3,7 @@
   imports = [
     ./lsp.nix
     ./git.nix
+    ./direnv.nix
     ./indent.nix
     ./format.nix
     ./todo.nix

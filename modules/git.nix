@@ -1,3 +1,4 @@
+{ pkgs, neogit, ... }:
 {
   plugins = {
     gitsigns = {
@@ -14,6 +15,11 @@
             "<leader>bq" = "Abort";
           };
         };
+      };
+
+      package = pkgs.vimUtils.buildVimPlugin {
+        name = "neogit";
+        src = neogit;
       };
     };
   };

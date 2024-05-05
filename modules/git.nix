@@ -16,11 +16,6 @@
           };
         };
       };
-
-      package = pkgs.vimUtils.buildVimPlugin {
-        name = "neogit";
-        src = neogit;
-      };
     };
   };
 }

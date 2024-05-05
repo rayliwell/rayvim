@@ -12,6 +12,16 @@
       flake = false;
     };
 
+    neovim-session-manager = {
+      url = "github:Shatur/neovim-session-manager";
+      flake = false;
+    };
+
+    neovim-project = {
+      url = "github:coffebar/neovim-project";
+      flake = false;
+    };
+
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -23,26 +33,32 @@
       self,
       nixpkgs,
       flake-utils,
-      neovim-nightly-overlay,
       nixvim,
-      neogit,
       ...
-    }:
+    }@inputs:
     flake-utils.lib.eachDefaultSystem (
       system:
       let
-        neovimOverlay = neovim-nightly-overlay.overlay;
-        pkgs = nixpkgs.legacyPackages.${system}.extend neovimOverlay;
+        overlays = import ./overlays.nix inputs;
+        module = import ./.;
+
+        pkgs = import nixpkgs {
+          inherit system;
+          overlays = with overlays; [
+            neovim-nightly
+            neogit-nightly
+            neovim-project
+            neovim-session-manager
+          ];
+        };
       in
       {
         packages = {
           default = nixvim.legacyPackages.${system}.makeNixvimWithModule {
             inherit pkgs;
-            module = (import ./.);
+            inherit module;
 
             extraSpecialArgs = {
-              inherit neogit;
-
               luaFunction = code: ''
                 function()
                   ${code}

@@ -5,9 +5,9 @@
     ./modules
   ];
 
-  extraPlugins = [
+  extraPlugins = with pkgs.vimPlugins; [
     # Ensure packages can use nerd font icons
-    pkgs.vimPlugins.nvim-web-devicons
+    nvim-web-devicons
   ];
 
   globals = {

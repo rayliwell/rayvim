@@ -1,8 +1,13 @@
-{ ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./keymaps
     ./modules
+  ];
+
+  extraPlugins = [
+    # Ensure packages can use nerd font icons
+    pkgs.vimPlugins.nvim-web-devicons
   ];
 
   globals = {

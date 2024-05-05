@@ -3,6 +3,7 @@
   imports = [
     ./buffer.nix
     ./help.nix
+    ./code.nix
     ./git.nix
     ./window.nix
   ];

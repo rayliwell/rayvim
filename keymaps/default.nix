@@ -20,6 +20,16 @@
     }
 
     {
+      key = "<leader><C- >";
+      action = "require('telescope').extensions['neovim-project'].discover";
+      lua = true;
+      mode = "n";
+      options = {
+        desc = "Browse projects";
+      };
+    }
+
+    {
       key = "<leader>/";
       action = "require('telescope.builtin').live_grep";
       lua = true;

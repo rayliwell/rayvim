@@ -14,6 +14,7 @@
 
         javascript = [ "prettier" ];
         typescript = [ "prettier" ];
+        typescriptreact = [ "prettier" ];
         html = [ "prettier" ];
         json = [ "prettier" ];
         jsonc = [ "prettier" ];

@@ -333,38 +333,6 @@
         "type": "github"
       }
     },
-    "neovim-project": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1714290084,
-        "narHash": "sha256-X3VVblv40epUAKGwfBkBQDXWCOKLLbboVpnqaYfZkQM=",
-        "owner": "coffebar",
-        "repo": "neovim-project",
-        "rev": "09449775ad1f7df3e751743c1b834a2fd8b536cc",
-        "type": "github"
-      },
-      "original": {
-        "owner": "coffebar",
-        "repo": "neovim-project",
-        "type": "github"
-      }
-    },
-    "neovim-session-manager": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1714905094,
-        "narHash": "sha256-VduhmnnRPIdi6GZ+TZUnZfpY4Lt8z5JBTKgl7oobtdY=",
-        "owner": "Shatur",
-        "repo": "neovim-session-manager",
-        "rev": "892c55f7256fe170301a1fdd21752982c75c3507",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Shatur",
-        "repo": "neovim-session-manager",
-        "type": "github"
-      }
-    },
     "nix-darwin": {
       "inputs": {
         "nixpkgs": [
@@ -461,8 +429,6 @@
         "flake-utils": "flake-utils",
         "neogit": "neogit",
         "neovim-nightly-overlay": "neovim-nightly-overlay",
-        "neovim-project": "neovim-project",
-        "neovim-session-manager": "neovim-session-manager",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim"
       }

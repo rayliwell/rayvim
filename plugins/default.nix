@@ -1,1 +1,1 @@
-{ imports = [ ./neovim-plugin.nix ]; }
+{ imports = [ ]; }

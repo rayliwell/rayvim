@@ -4,7 +4,6 @@
     ./lsp.nix
     ./git.nix
     ./direnv.nix
-    ./project.nix
     ./indent.nix
     ./format.nix
     ./todo.nix

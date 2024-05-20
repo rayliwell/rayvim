@@ -6,8 +6,11 @@
     ./plugins
   ];
 
+  # Ensure neovim resets cursor on exit (fixes cursor in Alacritty).
+  extraConfigVim = ''autocmd VimLeave * set guicursor= | call chansend(v:stderr, "\x1b[ q")'';
+
   extraPlugins = with pkgs.vimPlugins; [
-    # Ensure packages can use nerd font icons
+    # Ensure packages can use nerd font icons.
     nvim-web-devicons
   ];
 

@@ -1,12 +1,5 @@
-{ ... }:
-{
-  imports = [
-    ./buffer.nix
-    ./help.nix
-    ./code.nix
-    ./git.nix
-    ./window.nix
-  ];
+{ ... }: {
+  imports = [ ./buffer.nix ./help.nix ./code.nix ./git.nix ./window.nix ];
 
   keymaps = [
     {
@@ -14,9 +7,7 @@
       action = "require('telescope.builtin').find_files";
       lua = true;
       mode = "n";
-      options = {
-        desc = "File browser";
-      };
+      options = { desc = "File browser"; };
     }
 
     {
@@ -24,27 +15,21 @@
       action = "require('telescope.builtin').live_grep";
       lua = true;
       mode = "n";
-      options = {
-        desc = "Search";
-      };
+      options = { desc = "Search"; };
     }
 
     {
       key = "<leader>q";
       action = ":quitall<cr>";
       mode = "n";
-      options = {
-        desc = "Quit neovim";
-      };
+      options = { desc = "Quit neovim"; };
     }
 
     {
       key = "<leader>Q";
       action = ":quitall!<cr>";
       mode = "n";
-      options = {
-        desc = "Quit neovim (without saving)";
-      };
+      options = { desc = "Quit neovim (without saving)"; };
     }
   ];
 }

@@ -7,9 +7,7 @@
       action = "require('telescope.builtin').help_tags";
       lua = true;
       mode = "n";
-      options = {
-        desc = "Neovim help tags";
-      };
+      options = { desc = "Neovim help tags"; };
     }
 
     {
@@ -17,9 +15,7 @@
       action = "require('telescope.builtin').keymaps";
       lua = true;
       mode = "n";
-      options = {
-        desc = "Keymaps";
-      };
+      options = { desc = "Keymaps"; };
     }
 
     {
@@ -27,9 +23,7 @@
       action = "require('telescope.builtin').builtin";
       lua = true;
       mode = "n";
-      options = {
-        desc = "Telescopes";
-      };
+      options = { desc = "Telescopes"; };
     }
   ];
 }

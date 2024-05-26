@@ -1,9 +1,9 @@
-{ ... }:
-{
+{ ... }: {
   imports = [
     ./lsp.nix
     ./git.nix
     ./direnv.nix
+    ./neotree.nix
     ./indent.nix
     ./format.nix
     ./todo.nix

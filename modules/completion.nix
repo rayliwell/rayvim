@@ -9,19 +9,12 @@
           "<C-Space>" = "cmp.mapping.complete()";
           "<CR>" = "cmp.mapping.confirm({ select = true })";
         };
-        sources = [
-          { name = "path"; }
-          { name = "nvim_lsp"; }
-        ];
+        sources = [ { name = "path"; } { name = "nvim_lsp"; } ];
       };
     };
 
-    "cmp-nvim-lsp" = {
-      enable = true;
-    };
+    "cmp-nvim-lsp" = { enable = true; };
 
-    "cmp-path" = {
-      enable = true;
-    };
+    "cmp-path" = { enable = true; };
   };
 }

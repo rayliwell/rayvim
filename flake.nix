@@ -11,22 +11,13 @@
     };
   };
 
-  outputs =
-    {
-      self,
-      nixpkgs,
-      flake-utils,
-      nixvim,
-      ...
-    }:
-    flake-utils.lib.eachDefaultSystem (
-      system:
+  outputs = { self, nixpkgs, flake-utils, nixvim, ... }:
+    flake-utils.lib.eachDefaultSystem (system:
       let
         module = import ./.;
 
         pkgs = import nixpkgs { inherit system; };
-      in
-      {
+      in {
         packages = {
           default = nixvim.legacyPackages.${system}.makeNixvimWithModule {
             inherit pkgs;
@@ -41,6 +32,5 @@
             };
           };
         };
-      }
-    );
+      });
 }

@@ -1,9 +1,6 @@
-{ pkgs, neogit, ... }:
-{
+{ pkgs, neogit, ... }: {
   plugins = {
-    gitsigns = {
-      enable = true;
-    };
+    gitsigns = { enable = true; };
 
     neogit = {
       enable = true;

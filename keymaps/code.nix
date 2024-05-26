@@ -7,9 +7,7 @@
       action = "require('telescope.builtin').lsp_definitions";
       lua = true;
       mode = "n";
-      options = {
-        desc = "See definitions";
-      };
+      options = { desc = "See definitions"; };
     }
 
     {
@@ -17,9 +15,7 @@
       action = "vim.lsp.buf.hover";
       lua = true;
       mode = "n";
-      options = {
-        desc = "Documentation";
-      };
+      options = { desc = "Documentation"; };
     }
 
     {
@@ -27,9 +23,7 @@
       action = "require('telescope.builtin').lsp_type_definitions";
       lua = true;
       mode = "n";
-      options = {
-        desc = "Type definition";
-      };
+      options = { desc = "Type definition"; };
     }
 
     {
@@ -37,9 +31,7 @@
       action = "require('telescope.builtin').lsp_document_symbols";
       lua = true;
       mode = "n";
-      options = {
-        desc = "See symbols";
-      };
+      options = { desc = "See symbols"; };
     }
 
     {
@@ -47,9 +39,7 @@
       action = "require('telescope.builtin').lsp_workspace_symbols";
       lua = true;
       mode = "n";
-      options = {
-        desc = "All symbols";
-      };
+      options = { desc = "All symbols"; };
     }
 
     {
@@ -57,9 +47,7 @@
       action = "require('telescope.builtin').lsp_implementations";
       lua = true;
       mode = "n";
-      options = {
-        desc = "See implementations";
-      };
+      options = { desc = "See implementations"; };
     }
 
     {
@@ -67,9 +55,7 @@
       action = "vim.lsp.buf.declaration";
       lua = true;
       mode = "n";
-      options = {
-        desc = "Goto declaration";
-      };
+      options = { desc = "Goto declaration"; };
     }
 
     {
@@ -77,9 +63,7 @@
       action = "vim.lsp.buf.rename";
       lua = true;
       mode = "n";
-      options = {
-        desc = "Rename";
-      };
+      options = { desc = "Rename"; };
     }
 
     {
@@ -87,9 +71,7 @@
       action = "require('telescope.builtin').lsp_references";
       lua = true;
       mode = "n";
-      options = {
-        desc = "Goto references";
-      };
+      options = { desc = "Goto references"; };
     }
   ];
 }

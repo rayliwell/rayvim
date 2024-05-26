@@ -3,14 +3,9 @@
     telescope = {
       enable = true;
 
-      extensions = {
-        "file-browser" = {
-          enable = true;
-          settings = {
-            depth = 3;
-            respect_gitignore = true;
-            hidden = true;
-          };
+      settings = {
+        pickers.find_files = {
+          find_command = [ "fd" "--hidden" "--exclude" ".git" "--type" "f" "--color" "never" ];
         };
       };
     };

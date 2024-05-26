@@ -11,7 +11,7 @@
   keymaps = [
     {
       key = "<leader><leader>";
-      action = "require('telescope').extensions.file_browser.file_browser";
+      action = "require('telescope.builtin').find_files";
       lua = true;
       mode = "n";
       options = {

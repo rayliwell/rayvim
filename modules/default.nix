@@ -5,6 +5,7 @@
     ./direnv.nix
     ./neotree.nix
     ./indent.nix
+    ./colorizer.nix
     ./format.nix
     ./todo.nix
     ./completion.nix

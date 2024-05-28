@@ -60,7 +60,10 @@
     scrolloff = 999;
   };
 
-  colorschemes.catppuccin.enable = true;
+  colorschemes.tokyonight = {
+    enable = true;
+    settings.style = "night";
+  };
 
   viAlias = true;
   vimAlias = true;

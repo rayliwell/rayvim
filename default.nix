@@ -60,9 +60,9 @@
     scrolloff = 999;
   };
 
-  colorschemes.tokyonight = {
+  colorschemes.catppuccin = {
     enable = true;
-    settings.style = "night";
+    settings.flavour = "mocha";
   };
 
   viAlias = true;

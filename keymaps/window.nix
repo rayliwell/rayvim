@@ -1,4 +1,5 @@
-{ luaFunction, ... }: {
+{ luaFunction, ... }:
+{
   keymapCategories."w" = "Window";
 
   keymaps = [
@@ -9,7 +10,9 @@
       '';
       lua = true;
       mode = "n";
-      options = { desc = "Quit window"; };
+      options = {
+        desc = "Quit window";
+      };
     }
 
     {
@@ -19,7 +22,9 @@
       '';
       lua = true;
       mode = "n";
-      options = { desc = "Move to left window"; };
+      options = {
+        desc = "Move to left window";
+      };
     }
 
     {
@@ -29,7 +34,9 @@
       '';
       lua = true;
       mode = "n";
-      options = { desc = "Move to right window"; };
+      options = {
+        desc = "Move to right window";
+      };
     }
 
     {
@@ -39,7 +46,9 @@
       '';
       lua = true;
       mode = "n";
-      options = { desc = "Move to below window"; };
+      options = {
+        desc = "Move to below window";
+      };
     }
 
     {
@@ -49,7 +58,9 @@
       '';
       lua = true;
       mode = "n";
-      options = { desc = "Move to above window"; };
+      options = {
+        desc = "Move to above window";
+      };
     }
 
     {
@@ -60,7 +71,9 @@
       '';
       lua = true;
       mode = "n";
-      options = { desc = "Create window to left"; };
+      options = {
+        desc = "Create window to left";
+      };
     }
 
     {
@@ -70,7 +83,9 @@
       '';
       lua = true;
       mode = "n";
-      options = { desc = "Create window to right"; };
+      options = {
+        desc = "Create window to right";
+      };
     }
 
     {
@@ -80,7 +95,9 @@
       '';
       lua = true;
       mode = "n";
-      options = { desc = "Create window below"; };
+      options = {
+        desc = "Create window below";
+      };
     }
 
     {
@@ -91,7 +108,9 @@
       '';
       lua = true;
       mode = "n";
-      options = { desc = "Create window above"; };
+      options = {
+        desc = "Create window above";
+      };
     }
   ];
 }

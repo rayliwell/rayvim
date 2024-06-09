@@ -1,19 +1,27 @@
-{ pkgs, ... }: {
-  imports = [ ./keymaps ./modules ./plugins ];
+{ pkgs, ... }:
+{
+  imports = [
+    ./keymaps
+    ./modules
+    ./plugins
+  ];
 
   # Ensure neovim resets cursor on exit (fixes cursor in Alacritty).
-  extraConfigVim =
-    ''autocmd VimLeave * set guicursor= | call chansend(v:stderr, "\x1b[ q")'';
+  extraConfigVim = ''autocmd VimLeave * set guicursor= | call chansend(v:stderr, "\x1b[ q")'';
 
-  extraPackages = with pkgs; [ git fd ];
+  extraPackages = with pkgs; [
+    git
+    fd
+  ];
 
-  extraPlugins = with pkgs.vimPlugins;
-    [
-      # Ensure packages can use nerd font icons.
-      nvim-web-devicons
-    ];
+  extraPlugins = with pkgs.vimPlugins; [
+    # Ensure packages can use nerd font icons.
+    nvim-web-devicons
+  ];
 
-  globals = { mapleader = " "; };
+  globals = {
+    mapleader = " ";
+  };
 
   opts = {
     # Show (relative) line numbers.

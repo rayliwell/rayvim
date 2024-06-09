@@ -1,1 +1,7 @@
-{ plugins = { rainbow-delimiters = { enable = false; }; }; }
+{
+  plugins = {
+    rainbow-delimiters = {
+      enable = false;
+    };
+  };
+}

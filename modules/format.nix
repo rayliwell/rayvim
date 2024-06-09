@@ -13,6 +13,7 @@
         python = [ "black" ];
 
         javascript = [ "prettier" ];
+        javascriptreact = [ "prettier" ];
         typescript = [ "prettier" ];
         typescriptreact = [ "prettier" ];
         html = [ "prettier" ];

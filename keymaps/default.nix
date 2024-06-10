@@ -20,6 +20,15 @@
     }
 
     {
+      key = "<leader><tab>";
+      action = ":Neotree position=left toggle reveal<cr>";
+      mode = "n";
+      options = {
+        desc = "Browser";
+      };
+    }
+
+    {
       key = "<leader>/";
       action = "require('telescope.builtin').live_grep";
       lua = true;

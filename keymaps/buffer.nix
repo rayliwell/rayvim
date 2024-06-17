@@ -12,8 +12,17 @@
     }
 
     {
+      key = "<leader>bS";
+      action = ":wall<cr>";
+      mode = "n";
+      options = {
+        desc = "Save all buffers";
+      };
+    }
+
+    {
       key = "<leader>bq";
-      action = ":bdelete<cr>";
+      action = ":enew <bar>:bdelete #<cr>";
       mode = "n";
       options = {
         desc = "Buffer quit";

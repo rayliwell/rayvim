@@ -1,11 +1,11 @@
+{ helpers, ... }:
 {
   keymapCategories."h" = "Help";
 
   keymaps = [
     {
       key = "<leader>hh";
-      action = "require('telescope.builtin').help_tags";
-      lua = true;
+      action = helpers.mkRaw "require('telescope.builtin').help_tags";
       mode = "n";
       options = {
         desc = "Neovim help tags";
@@ -14,8 +14,7 @@
 
     {
       key = "<leader>hk";
-      action = "require('telescope.builtin').keymaps";
-      lua = true;
+      action = helpers.mkRaw "require('telescope.builtin').keymaps";
       mode = "n";
       options = {
         desc = "Keymaps";
@@ -24,8 +23,7 @@
 
     {
       key = "<leader>ht";
-      action = "require('telescope.builtin').builtin";
-      lua = true;
+      action = helpers.mkRaw "require('telescope.builtin').builtin";
       mode = "n";
       options = {
         desc = "Telescopes";

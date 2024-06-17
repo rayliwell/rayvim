@@ -1,3 +1,4 @@
+{ helpers, ... }:
 {
   imports = [
     ./buffer.nix
@@ -11,8 +12,7 @@
   keymaps = [
     {
       key = "<leader><leader>";
-      action = "require('telescope.builtin').find_files";
-      lua = true;
+      action = helpers.mkRaw "require('telescope.builtin').find_files";
       mode = "n";
       options = {
         desc = "File browser";
@@ -30,8 +30,7 @@
 
     {
       key = "<leader>/";
-      action = "require('telescope.builtin').live_grep";
-      lua = true;
+      action = helpers.mkRaw "require('telescope.builtin').live_grep";
       mode = "n";
       options = {
         desc = "Search";

@@ -1,11 +1,11 @@
+{ helpers, ... }:
 {
   keymapCategories."g" = "Git";
 
   keymaps = [
     {
       key = "<leader>gg";
-      action = "require('neogit').open";
-      lua = true;
+      action = helpers.mkRaw "require('neogit').open";
       mode = "n";
       options = {
         desc = "Open git";

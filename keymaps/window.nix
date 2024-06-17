@@ -1,14 +1,13 @@
-{ luaFunction, ... }:
+{ helpers, luaFunction, ... }:
 {
   keymapCategories."w" = "Window";
 
   keymaps = [
     {
       key = "<leader>wq";
-      action = luaFunction ''
+      action = helpers.mkRaw (luaFunction ''
         vim.cmd("wincmd q")
-      '';
-      lua = true;
+      '');
       mode = "n";
       options = {
         desc = "Quit window";
@@ -17,10 +16,9 @@
 
     {
       key = "<leader>wh";
-      action = luaFunction ''
+      action = helpers.mkRaw (luaFunction ''
         vim.cmd("wincmd h")
-      '';
-      lua = true;
+      '');
       mode = "n";
       options = {
         desc = "Move to left window";
@@ -29,10 +27,9 @@
 
     {
       key = "<leader>wl";
-      action = luaFunction ''
+      action = helpers.mkRaw (luaFunction ''
         vim.cmd("wincmd l")
-      '';
-      lua = true;
+      '');
       mode = "n";
       options = {
         desc = "Move to right window";
@@ -41,10 +38,9 @@
 
     {
       key = "<leader>wj";
-      action = luaFunction ''
+      action = helpers.mkRaw (luaFunction ''
         vim.cmd("wincmd j")
-      '';
-      lua = true;
+      '');
       mode = "n";
       options = {
         desc = "Move to below window";
@@ -53,10 +49,9 @@
 
     {
       key = "<leader>wk";
-      action = luaFunction ''
+      action = helpers.mkRaw (luaFunction ''
         vim.cmd("wincmd k")
-      '';
-      lua = true;
+      '');
       mode = "n";
       options = {
         desc = "Move to above window";
@@ -65,11 +60,10 @@
 
     {
       key = "<leader>wH";
-      action = luaFunction ''
+      action = helpers.mkRaw (luaFunction ''
         vim.cmd("wincmd v")
         vim.cmd("wincmd h")
-      '';
-      lua = true;
+      '');
       mode = "n";
       options = {
         desc = "Create window to left";
@@ -78,10 +72,9 @@
 
     {
       key = "<leader>wL";
-      action = luaFunction ''
+      action = helpers.mkRaw (luaFunction ''
         vim.cmd("wincmd v")
-      '';
-      lua = true;
+      '');
       mode = "n";
       options = {
         desc = "Create window to right";
@@ -90,10 +83,9 @@
 
     {
       key = "<leader>wJ";
-      action = luaFunction ''
+      action = helpers.mkRaw (luaFunction ''
         vim.cmd("wincmd s")
-      '';
-      lua = true;
+      '');
       mode = "n";
       options = {
         desc = "Create window below";
@@ -102,11 +94,10 @@
 
     {
       key = "<leader>wH";
-      action = luaFunction ''
+      action = helpers.mkRaw (luaFunction ''
         vim.cmd("wincmd s")
         vim.cmd("wincmd k")
-      '';
-      lua = true;
+      '');
       mode = "n";
       options = {
         desc = "Create window above";

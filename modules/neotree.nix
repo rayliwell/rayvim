@@ -1,5 +1,10 @@
+{ pkgs, ... }:
 {
   plugins = {
+    lsp-file-operations = {
+      enable = true;
+    };
+
     neo-tree = {
       enable = true;
 
@@ -14,6 +19,10 @@
 
       popupBorderStyle = "rounded";
       enableGitStatus = false;
+
+      extraOptions = {
+        use_libuv_file_watcher = true;
+      };
     };
   };
 }

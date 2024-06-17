@@ -7,7 +7,11 @@
 
     nixvim = {
       url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nvim-lsp-file-operations = {
+      url = "github:antosha417/nvim-lsp-file-operations";
+      flake = false;
     };
   };
 
@@ -18,13 +22,17 @@
       flake-utils,
       nixvim,
       ...
-    }:
+    }@inputs:
     flake-utils.lib.eachDefaultSystem (
       system:
       let
         module = import ./.;
+        overlays = import ./overlays.nix inputs;
 
-        pkgs = import nixpkgs { inherit system; };
+        pkgs = import nixpkgs {
+          inherit system;
+          overlays = with overlays; [ nvim-lsp-file-operations ];
+        };
       in
       {
         packages = {

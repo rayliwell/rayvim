@@ -1,5 +1,7 @@
 {
   plugins = {
+    tailwind-tools.enable = true;
+
     lsp = {
       enable = true;
 

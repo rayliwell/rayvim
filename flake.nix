@@ -13,6 +13,11 @@
       url = "github:antosha417/nvim-lsp-file-operations";
       flake = false;
     };
+
+    tailwind-tools = {
+      url = "github:luckasRanarison/tailwind-tools.nvim";
+      flake = false;
+    };
   };
 
   outputs =
@@ -31,7 +36,10 @@
 
         pkgs = import nixpkgs {
           inherit system;
-          overlays = with overlays; [ nvim-lsp-file-operations ];
+          overlays = with overlays; [
+            nvim-lsp-file-operations
+            tailwind-tools
+          ];
         };
       in
       {

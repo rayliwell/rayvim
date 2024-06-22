@@ -311,6 +311,22 @@
         "type": "github"
       }
     },
+    "tailwind-tools": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1715870673,
+        "narHash": "sha256-7aPd7RXC+SbekQZrkSSdNmGIZOfLEM23v7h6sgaZlH8=",
+        "owner": "luckasRanarison",
+        "repo": "tailwind-tools.nvim",
+        "rev": "a95aaf11d9deca884743c9017323c0ffea0015f2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "luckasRanarison",
+        "repo": "tailwind-tools.nvim",
+        "type": "github"
+      }
+    },
     "treefmt-nix": {
       "inputs": {
         "nixpkgs": [

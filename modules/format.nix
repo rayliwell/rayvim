@@ -3,6 +3,8 @@
     "conform-nvim" = {
       enable = true;
 
+      notifyOnError = false;
+
       formatOnSave = {
         lspFallback = true;
         timeoutMs = 500;

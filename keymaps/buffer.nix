@@ -22,7 +22,7 @@
 
     {
       key = "<leader>bq";
-      action = ":enew <bar>:bdelete #<cr>";
+      action = ":bp<bar>sp<bar>bn<bar>bd<CR>";
       mode = "n";
       options = {
         desc = "Buffer quit";

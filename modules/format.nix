@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   plugins = {
     "conform-nvim" = {
@@ -10,7 +11,9 @@
         timeoutMs = 500;
       };
 
-      formattersByFt = {
+      formattersByFt = with pkgs; {
+        lua = [ "${stylua}/bin/stylua" ];
+
         nix = [ "nixfmt" ];
         python = [ "black" ];
 

@@ -73,6 +73,22 @@
     settings.flavour = "mocha";
   };
 
+  extraConfigLua =
+    # lua
+    ''
+      function openExternalProgram (program)
+        vim.fn.jobstart(
+          string.format(
+            [[ NVIM="%s" EDITOR="%s" %s "%s" ]],
+            vim.v.servername,
+            "${pkgs.neovim-remote}/bin/nvr --remote-wait",
+            program,
+            vim.fn.expand("%")
+          )
+        )
+      end
+    '';
+
   viAlias = true;
   vimAlias = true;
 

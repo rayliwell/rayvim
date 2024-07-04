@@ -48,12 +48,14 @@
             inherit pkgs;
             inherit module;
 
-            extraSpecialArgs = {
+            extraSpecialArgs = rec {
               luaFunction = code: ''
                 function()
                   ${code}
                 end
               '';
+
+              openExternalProgram = program: (luaFunction "openExternalProgram(\"${program}\")");
             };
           };
         };

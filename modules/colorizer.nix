@@ -3,15 +3,21 @@
     "nvim-colorizer" = {
       enable = true;
 
-      fileTypes = [
-        {
-          language = ''["*"]'';
-          css = true;
-          names = false;
-          css_fn = true;
-          hsl_fn = true;
-          tailwind = true;
-        }
+      userDefaultOptions = {
+        names = false;
+        RGB = true;
+        RRGGBB = true;
+        RRGGBBAA = true;
+        AARRGGBB = true;
+        css_fn = true;
+        tailwind = true;
+      };
+
+      bufTypes = [
+        "*"
+        "!nofile"
+        "!prompt"
+        "!popup"
       ];
     };
   };

@@ -5,6 +5,10 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
 
+    tree-sitter-rstml = {
+      url = "github:rayliwell/tree-sitter-rstml/flake";
+    };
+
     nixvim = {
       url = "github:nix-community/nixvim";
     };
@@ -24,6 +28,7 @@
     {
       self,
       nixpkgs,
+      tree-sitter-rstml,
       flake-utils,
       nixvim,
       ...
@@ -49,6 +54,9 @@
             inherit module;
 
             extraSpecialArgs = rec {
+              inherit inputs;
+              inherit system;
+
               luaFunction = code: ''
                 function()
                   ${code}

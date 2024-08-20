@@ -3,6 +3,7 @@
     ./lsp.nix
     ./git.nix
     ./direnv.nix
+    ./codeium.nix
     ./neotree.nix
     ./indent.nix
     ./colorizer.nix

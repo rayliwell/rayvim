@@ -1,4 +1,9 @@
-{ config, lib, ... }:
+{
+  config,
+  lib,
+  helpers,
+  ...
+}:
 {
   options = with lib; {
     keymapCategories = mkOption { type = types.lazyAttrsOf types.str; };
@@ -8,13 +13,12 @@
     plugins = {
       "which-key" = {
         enable = true;
-        registrations = lib.attrsets.mapAttrs' (
-          key: name:
-          lib.attrsets.nameValuePair ("<leader>" + key) {
-            inherit name;
-            "_" = "which_key_ignore";
-          }
-        ) config.keymapCategories;
+        settings = {
+          spec = lib.attrsets.mapAttrsToList (key: name: {
+            __unkeyed = "<leader>${key}";
+            group = name;
+          }) config.keymapCategories;
+        };
       };
     };
   };

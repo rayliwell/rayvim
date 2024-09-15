@@ -18,6 +18,11 @@
       flake = false;
     };
 
+    mdx = {
+      url = "github:davidmh/mdx.nvim";
+      flake = false;
+    };
+
     tailwind-tools = {
       url = "github:luckasRanarison/tailwind-tools.nvim";
       flake = false;
@@ -45,8 +50,9 @@
             allowUnfree = true;
           };
           overlays = with overlays; [
-            nvim-lsp-file-operations
+            mdx
             tailwind-tools
+            nvim-lsp-file-operations
           ];
         };
       in

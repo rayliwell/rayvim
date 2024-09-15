@@ -1,4 +1,15 @@
 inputs: {
+  mdx = final: prev: {
+    vimPlugins = prev.vimPlugins.extend (
+      final': prev': {
+        mdx = prev.vimUtils.buildVimPlugin {
+          name = "mdx.nvim";
+          src = inputs.mdx;
+        };
+      }
+    );
+  };
+
   nvim-lsp-file-operations = final: prev: {
     vimPlugins = prev.vimPlugins.extend (
       final': prev': {

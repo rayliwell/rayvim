@@ -4,6 +4,10 @@
   imports = [ inputs.tree-sitter-rstml.nixvimModule ];
 
   plugins = {
+    mdx = {
+      enable = true;
+    };
+
     ts-autotag = {
       enable = true;
     };

@@ -165,6 +165,22 @@
         "type": "github"
       }
     },
+    "mdx": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1708579602,
+        "narHash": "sha256-CYcL+s1634UgquwUYp70iAD2xC6r87j6w5jYv90mUAg=",
+        "owner": "davidmh",
+        "repo": "mdx.nvim",
+        "rev": "61b93f6576cb5229020723c7a81f5a01d2667d05",
+        "type": "github"
+      },
+      "original": {
+        "owner": "davidmh",
+        "repo": "mdx.nvim",
+        "type": "github"
+      }
+    },
     "nix-darwin": {
       "inputs": {
         "nixpkgs": [
@@ -301,6 +317,7 @@
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
+        "mdx": "mdx",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
         "nvim-lsp-file-operations": "nvim-lsp-file-operations",

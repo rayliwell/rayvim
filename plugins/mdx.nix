@@ -1,13 +1,10 @@
 {
-  pkgs,
-  config,
-  helpers,
+  lib,
   ...
 }:
-helpers.neovim-plugin.mkNeovimPlugin config {
+lib.nixvim.neovim-plugin.mkNeovimPlugin {
   name = "mdx";
-  originalName = "mdx";
-  defaultPackage = pkgs.vimPlugins.mdx;
+  package = "mdx";
 
   maintainers = [ ];
 }

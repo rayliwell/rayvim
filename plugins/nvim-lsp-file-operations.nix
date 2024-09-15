@@ -1,13 +1,10 @@
 {
-  pkgs,
-  config,
-  helpers,
+  lib,
   ...
 }:
-helpers.neovim-plugin.mkNeovimPlugin config {
+lib.nixvim.neovim-plugin.mkNeovimPlugin {
   name = "lsp-file-operations";
-  originalName = "lsp-file-operations";
-  defaultPackage = pkgs.vimPlugins.nvim-lsp-file-operations;
+  package = "nvim-lsp-file-operations";
 
   maintainers = [ ];
 }

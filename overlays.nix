@@ -3,7 +3,7 @@ inputs: {
     vimPlugins = prev.vimPlugins.extend (
       final': prev': {
         mdx = prev.vimUtils.buildVimPlugin {
-          name = "mdx.nvim";
+          name = "mdx";
           src = inputs.mdx;
         };
       }

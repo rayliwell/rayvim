@@ -1,13 +1,10 @@
 {
-  pkgs,
-  config,
-  helpers,
+  lib,
   ...
 }:
-helpers.neovim-plugin.mkNeovimPlugin config {
+lib.nixvim.neovim-plugin.mkNeovimPlugin {
   name = "tailwind-tools";
-  originalName = "tailwind-tools";
-  defaultPackage = pkgs.vimPlugins.tailwind-tools;
+  package = "tailwind-tools";
 
   maintainers = [ ];
 }

@@ -93,7 +93,7 @@
     }
 
     {
-      key = "<leader>wH";
+      key = "<leader>wK";
       action = helpers.mkRaw (luaFunction ''
         vim.cmd("wincmd s")
         vim.cmd("wincmd k")

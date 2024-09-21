@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
   plugins = {
     lsp-file-operations = {
@@ -13,6 +12,8 @@
         autoExpandWidth = true;
 
         mappings = {
+          "<space>" = "none";
+          "<esc>" = "close_window";
           "<tab>" = "toggle_directory";
         };
       };

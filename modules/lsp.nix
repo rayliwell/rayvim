@@ -7,8 +7,8 @@
 
       servers = {
         "astro".enable = true;
-        "nil-ls".enable = true;
-        "tsserver".enable = true;
+        "nil_ls".enable = true;
+        "ts_ls".enable = true;
         "tailwindcss".enable = true;
       };
     };

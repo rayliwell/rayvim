@@ -14,11 +14,6 @@
     fd
   ];
 
-  extraPlugins = with pkgs.vimPlugins; [
-    # Ensure packages can use nerd font icons.
-    nvim-web-devicons
-  ];
-
   globals = {
     mapleader = " ";
   };

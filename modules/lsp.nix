@@ -6,10 +6,10 @@
       enable = true;
 
       servers = {
-        "astro".enable = true;
-        "nil_ls".enable = true;
-        "ts_ls".enable = true;
-        "tailwindcss".enable = true;
+        astro.enable = true;
+        nixd.enable = true;
+        ts_ls.enable = true;
+        tailwindcss.enable = true;
       };
     };
   };

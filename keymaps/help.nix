@@ -1,6 +1,6 @@
 { helpers, ... }:
 {
-  keymapCategories."h" = "Help";
+  keymapCategories."h" = "Diagnostics";
 
   keymaps = [
     {

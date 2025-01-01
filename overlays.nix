@@ -15,6 +15,7 @@ inputs: {
       final': prev': {
         nvim-lsp-file-operations = prev.vimUtils.buildVimPlugin {
           name = "nvim-lsp-file-operations";
+          doCheck = false;
           src = inputs.nvim-lsp-file-operations;
         };
       }

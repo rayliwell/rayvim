@@ -1,8 +1,9 @@
 {
   lib,
+  pkgs,
   ...
 }:
-lib.nixvim.neovim-plugin.mkNeovimPlugin {
+lib.nixvim.plugins.neovim.mkNeovimPlugin {
   name = "lsp-file-operations";
   package = "nvim-lsp-file-operations";
 

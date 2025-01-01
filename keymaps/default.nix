@@ -12,10 +12,10 @@
   keymaps = [
     {
       key = "<leader><leader>";
-      action = ":Neotree position=current toggle reveal<cr>";
+      action = helpers.mkRaw "require('telescope.builtin').find_files";
       mode = "n";
       options = {
-        desc = "File browser";
+        desc = "Find files";
       };
     }
 

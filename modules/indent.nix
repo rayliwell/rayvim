@@ -1,6 +1,6 @@
 {
   plugins = {
-    sleuth = {
+    guess-indent = {
       enable = true;
     };
   };

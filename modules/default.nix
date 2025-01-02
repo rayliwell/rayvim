@@ -1,5 +1,6 @@
 {
   imports = [
+    ./comments.nix
     ./lsp.nix
     ./git.nix
     ./direnv.nix

@@ -13,7 +13,7 @@
     };
 
     treesitter-context = {
-      enable = true;
+      enable = false;
     };
 
     treesitter = {

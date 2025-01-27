@@ -23,10 +23,6 @@
       flake = false;
     };
 
-    tailwind-tools = {
-      url = "github:luckasRanarison/tailwind-tools.nvim";
-      flake = false;
-    };
   };
 
   outputs =
@@ -51,7 +47,6 @@
           };
           overlays = with overlays; [
             mdx
-            tailwind-tools
             nvim-lsp-file-operations
           ];
         };

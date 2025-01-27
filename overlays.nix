@@ -21,15 +21,4 @@ inputs: {
       }
     );
   };
-
-  tailwind-tools = final: prev: {
-    vimPlugins = prev.vimPlugins.extend (
-      final': prev': {
-        tailwind-tools = prev.vimUtils.buildVimPlugin {
-          name = "tailwind-tools";
-          src = inputs.tailwind-tools;
-        };
-      }
-    );
-  };
 }

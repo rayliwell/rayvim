@@ -6,7 +6,6 @@
     ./git.nix
     ./direnv.nix
     ./icons.nix
-    ./codeium.nix
     ./neotree.nix
     ./indent.nix
     ./colorizer.nix
